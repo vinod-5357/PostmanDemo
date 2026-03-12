@@ -1,0 +1,649 @@
+{
+  "info": {
+    "_postman_id": "32b751ed-36d5-4b2c-9d07-67f5fa2df28d",
+    "name": "TBOHOTEL_Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15103355"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"ClientId\":\"ApiIntegrationNew\",\"UserName\":\"cruise\",\"Password\":\"cruise@1234\",\"LoginType\":\"2\",\"EndUserIp\":\"192.168.0.170\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://Sharedapi.tektravels.com/SharedData.svc/rest/Authenticate",
+          "protocol": "http",
+          "host": [
+            "Sharedapi",
+            "tektravels",
+            "com"
+          ],
+          "path": [
+            "SharedData.svc",
+            "rest",
+            "Authenticate"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Authentication",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"ClientId\":\"ApiIntegrationNew\",\"UserName\":\"cruise\",\"Password\":\"cruise@1234\",\"LoginType\":\"2\",\"EndUserIp\":\"192.168.0.170\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://Sharedapi.tektravels.com/SharedData.svc/rest/Authenticate",
+              "protocol": "http",
+              "host": [
+                "Sharedapi",
+                "tektravels",
+                "com"
+              ],
+              "path": [
+                "SharedData.svc",
+                "rest",
+                "Authenticate"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Feb 2026 13:50:02 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "350"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "private"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-AspNet-Version",
+              "value": "4.0.30319"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"Status\": 1,\n    \"TokenId\": \"1d7a06dd-d311-4938-85fc-baa22e160568\",\n    \"Error\": {\n        \"ErrorCode\": 0,\n        \"ErrorMessage\": \"\"\n    },\n    \"Member\": {\n        \"FirstName\": \"Sudhir\",\n        \"LastName\": \"srivastava\",\n        \"Email\": \"apitest@test.com\",\n        \"MemberId\": 10269,\n        \"AgencyId\": 9131,\n        \"LoginName\": \"cruise\",\n        \"LoginDetails\": \"Login Success at#@ 02/02/2026 07:16:48 #@ IPAddress: 148.251.132.11\",\n        \"isPrimaryAgent\": false\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "GetHotellist",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"EndUserIp\":\"192.168.0.170\",\"ClientId\":\"ApiIntegrationNew\",\"TokenId\":\"7ebd2785-9bb1-4a4e-9944-802008a091c4\",\"BookingMode\":\"5\",\"CheckInDate\":\"25/03/2026\",\"NoOfNights\":\"1\",\"CountryCode\":\"IN\",\"CityId\":\"130443\",\"ResultCount \":\"100\",\"PreferredCurrency\":\"INR\",\"GuestNationality\":\"IN\",\"NoOfRooms\":\"1\",\"RoomGuests\":[{\"NoOfAdults\":1,\"NoOfChild\":0,\"ChildAge\":[]}],\"PreferredHotel\":\"\",\"MaxRating\":\"5\",\"MinRating\":\"0.0\",\"IsTBOMapped\":true,\"HotelId\":\"\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/GetHotelResult/",
+          "protocol": "https",
+          "host": [
+            "HotelBE",
+            "tektravels",
+            "com"
+          ],
+          "path": [
+            "hotelservice.svc",
+            "rest",
+            "GetHotelResult",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GetHotellist",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\"EndUserIp\":\"192.168.0.170\",\"ClientId\":\"ApiIntegrationNew\",\"TokenId\":\"1d7a06dd-d311-4938-85fc-baa22e160568\",\"BookingMode\":\"5\",\"CheckInDate\":\"20/03/2026\",\"NoOfNights\":\"1\",\"CountryCode\":\"IN\",\"CityId\":\"130443\",\"ResultCount \":\"100\",\"PreferredCurrency\":\"INR\",\"GuestNationality\":\"IN\",\"NoOfRooms\":\"1\",\"RoomGuests\":[{\"NoOfAdults\":2,\"NoOfChild\":0,\"ChildAge\":[]}],\"PreferredHotel\":\"\",\"MaxRating\":\"5\",\"MinRating\":\"0.0\",\"IsTBOMapped\":true,\"HotelId\":\"\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/GetHotelResult/",
+              "protocol": "https",
+              "host": [
+                "HotelBE",
+                "tektravels",
+                "com"
+              ],
+              "path": [
+                "hotelservice.svc",
+                "rest",
+                "GetHotelResult",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "date",
+              "value": "Mon, 02 Feb 2026 13:52:45 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "11673"
+            },
+            {
+              "key": "cache-control",
+              "value": "private"
+            },
+            {
+              "key": "server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "x-aspnet-version",
+              "value": "4.0.30319"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"HotelSearchResult\": {\n        \"ResponseStatus\": 1,\n        \"Error\": {\n            \"ErrorCode\": 0,\n            \"ErrorMessage\": \"\"\n        },\n        \"TraceId\": \"8bd23232-ecdd-4db5-a027-c6f6d3d80003\",\n        \"CityId\": \"130443\",\n        \"Remarks\": \"india - land of mystries \\\"//\\\" \\\"  /// \\\"  \",\n        \"CheckInDate\": \"2026-03-20\",\n        \"CheckOutDate\": \"2026-03-21\",\n        \"PreferredCurrency\": \"INR\",\n        \"NoOfRooms\": 1,\n        \"RoomGuests\": [\n            {\n                \"NoOfAdults\": 2,\n                \"NoOfChild\": 0,\n                \"ChildAge\": []\n            }\n        ],\n        \"HotelResults\": [\n            {\n                \"IsHotDeal\": false,\n                \"ResultIndex\": 5,\n                \"HotelCode\": \"75019\",\n                \"HotelName\": \"OYO 1 Plus One Hotel Residency Near Nawada Metro Station\",\n                \"HotelCategory\": \"\",\n                \"StarRating\": 3,\n                \"HotelDescription\": \"Matiala Extension, Sukh Ram Park, Matiala, DelhiDid you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation &amp; safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.LocationPlus One Hotel Residency is located in the well known Uttam Nagar area of Delhi. It is located right on Matiala Road and is surrounded by places like Chhath Pooja Ghaat, Bharat Garden, Shiv Mandir and Dwarika Medicare and Maternity Centre.Special FeaturesThis property has spacious rooms that have been well decorated with comfortable furniture. The decor is elegant and homely and each room has a beautiful false ceiling. Washrooms are clean and well maintained and the common areas are well furnished.AmenitiesWooden Floors, AC, Laundry service, Parking Facility, Geyser, Jacuzzi, Elevator, 24/7 Checkin, Room Service, Free Wifi, Modern Wardrobe, TV, Reception, Fire-Extinguisher, Bath Tub, Card Payment, Attached Bathroom, Mirror, CCTV Cameras, Power backup, Fan are among the amenities featured at this property for a comfortable stay.Whats NearbyEating joints and restaurantsnearby that serve delicious food are Grannys Flavour, Radhika Restaurant, Pizza Mania, Chatpata Tawa Tandoor and The Burger Club. \",\n                \"HotelPromotion\": \"\",\n                \"HotelPolicy\": \"Check in After 12:00 PM|Check out Before 11:00 AM|No Triple Occupancy|Pure Vegetarian Kitchen|International Guests are Not Allowed|No Triple Occupancy | No Non Veg | No Pak/ Afghan/ Bang | specific_restrictions | One Liner | no_packages | No Foreign Guests |\",\n                \"Price\": {\n                    \"CurrencyCode\": \"INR\",\n                    \"RoomPrice\": 857.44,\n                    \"Tax\": 0,\n                    \"ExtraGuestCharge\": 0,\n                    \"ChildCharge\": 0,\n                    \"OtherCharges\": 0,\n                    \"Discount\": 0,\n                    \"PublishedPrice\": 932,\n                    \"PublishedPriceRoundedOff\": 932,\n                    \"OfferedPrice\": 857.44,\n                    \"OfferedPriceRoundedOff\": 857,\n                    \"AgentCommission\": 74.56,\n                    \"AgentMarkUp\": 0,\n                    \"ServiceTax\": 0,\n                    \"TCS\": 0,\n                    \"TDS\": 0,\n                    \"ServiceCharge\": 0,\n                    \"TotalGSTAmount\": 0,\n                    \"GST\": {\n                        \"CGSTAmount\": 0,\n                        \"CGSTRate\": 0,\n                        \"CessAmount\": 0,\n                        \"CessRate\": 0,\n                        \"IGSTAmount\": 0,\n                        \"IGSTRate\": 18,\n                        \"SGSTAmount\": 0,\n                        \"SGSTRate\": 0,\n                        \"TaxableAmount\": 0\n                    }\n                },\n                \"HotelPicture\": \"https://images.oyoroomscdn.com/uploads/hotel_image/75019/80d102f43dbbb5bf.jpg\",\n                \"HotelAddress\": \"Matiala Extension, Sukh Ram Park, Matiala, 110059\",\n                \"HotelContactNo\": \"\",\n                \"HotelMap\": null,\n                \"Latitude\": \"28.6147\",\n                \"Longitude\": \"77.04683\",\n                \"HotelLocation\": null,\n                \"SupplierPrice\": null,\n                \"RoomDetails\": []\n            },\n            {\n                \"IsHotDeal\": false,\n                \"ResultIndex\": 1,\n                \"HotelCode\": \"106109\",\n                \"HotelName\": \"Capital O The Lazeez Hotel Near Lajpat Nagar Metro Station\",\n                \"HotelCategory\": \"\",\n                \"StarRating\": 3,\n                \"HotelDescription\": \"Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation &amp; safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.Planning a trip to the lively city of Delhi? You might just love this stay option Lajpat Nagar. This location is the perfect mix of city life and greenery, and the stay itself well-designed, has lots of bright light, and the furniture is contemporary and comfortable. Do check out the view from here, which is quite spectacular.Getting there: The Lajpat Nagar Bus Stop and the Vinobapuri Metro Station, and also the Laj[at Nagar Railway Station are just 5 minutes away from the property.Whats nearby: Delhi is known for itâ€™s hearty and delicious food, which you can enjoy at places like Bikanervala Family Restaurant, Mazaar, and Kabul Delhi, which are 5-10 minutes away. You can also enjoy a movie at the nearby PVR 3Câ€™s Cinema, and then indulge in a relaxing evening at the Lala Lajpat Rai Memorial Park. \",\n                \"HotelPromotion\": \"\",\n                \"HotelPolicy\": \"Check in After 12:00 PM|Check out Before 11:00 AM|International Guests are Not Allowed|specific_restrictions | One Liner | Sold Out | No Foreign Guests |\",\n                \"Price\": {\n                    \"CurrencyCode\": \"INR\",\n                    \"RoomPrice\": 1277.88,\n                    \"Tax\": 0,\n                    \"ExtraGuestCharge\": 0,\n                    \"ChildCharge\": 0,\n                    \"OtherCharges\": 0,\n                    \"Discount\": 0,\n                    \"PublishedPrice\": 1389,\n                    \"PublishedPriceRoundedOff\": 1389,\n                    \"OfferedPrice\": 1277.88,\n                    \"OfferedPriceRoundedOff\": 1278,\n                    \"AgentCommission\": 111.12,\n                    \"AgentMarkUp\": 0,\n                    \"ServiceTax\": 0,\n                    \"TCS\": 0,\n                    \"TDS\": 0,\n                    \"ServiceCharge\": 0,\n                    \"TotalGSTAmount\": 0,\n                    \"GST\": {\n                        \"CGSTAmount\": 0,\n                        \"CGSTRate\": 0,\n                        \"CessAmount\": 0,\n                        \"CessRate\": 0,\n                        \"IGSTAmount\": 0,\n                        \"IGSTRate\": 18,\n                        \"SGSTAmount\": 0,\n                        \"SGSTRate\": 0,\n                        \"TaxableAmount\": 0\n                    }\n                },\n                \"HotelPicture\": \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/1144cf68b16f889b.jpg\",\n                \"HotelAddress\": \"Block I, Lajpat Nagar Ii, Lajpat Nagar, 110024\",\n                \"HotelContactNo\": \"\",\n                \"HotelMap\": null,\n                \"Latitude\": \"28.5698651092765\",\n                \"Longitude\": \"77.24419394508004\",\n                \"HotelLocation\": null,\n                \"SupplierPrice\": null,\n                \"RoomDetails\": []\n            },\n            {\n                \"IsHotDeal\": false,\n                \"ResultIndex\": 4,\n                \"HotelCode\": \"106191\",\n                \"HotelName\": \"Super OYO KEY ROOMS TILAK NAGAR\",\n                \"HotelCategory\": \"\",\n                \"StarRating\": 3,\n                \"HotelDescription\": \"Near Tilak Nagar, Mukherji Park, DelhiDid you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation &amp; safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.LocationLocated in Tilak Nagar, Delhi OYO Flagship 26722 is a warm and soothing property. It is close to attractions like Woodl and Park, Merino Galler, Kali Mata Mandir Dham, Shri Santoshi Mata Mandir, Nihal Vihar Park and Vir Savarkar Park.Special FeaturesThe property has nicely done rooms. The corridor is well-lit and airy.Amenities AC, TV and free internet are provided in the rooms. The property also provides other facilities like CCTV security, a refrigerator and card payment. There is a kitchen on the premises too.Whats NearbyPunjabi Ninja, Vege-Mitz, Flavour Of Momos, Biryani Lovers and Rolls Tiger are some famous restaurants nearby which can be tried for good food. \",\n                \"HotelPromotion\": \"\",\n                \"HotelPolicy\": \"Check in After 12:00 PM|Check out Before 11:00 AM|specific_restrictions | One Liner |\",\n                \"Price\": {\n                    \"CurrencyCode\": \"INR\",\n                    \"RoomPrice\": 1424.16,\n                    \"Tax\": 0,\n                    \"ExtraGuestCharge\": 0,\n                    \"ChildCharge\": 0,\n                    \"OtherCharges\": 0,\n                    \"Discount\": 0,\n                    \"PublishedPrice\": 1548,\n                    \"PublishedPriceRoundedOff\": 1548,\n                    \"OfferedPrice\": 1424.16,\n                    \"OfferedPriceRoundedOff\": 1424,\n                    \"AgentCommission\": 123.84,\n                    \"AgentMarkUp\": 0,\n                    \"ServiceTax\": 0,\n                    \"TCS\": 0,\n                    \"TDS\": 0,\n                    \"ServiceCharge\": 0,\n                    \"TotalGSTAmount\": 0,\n                    \"GST\": {\n                        \"CGSTAmount\": 0,\n                        \"CGSTRate\": 0,\n                        \"CessAmount\": 0,\n                        \"CessRate\": 0,\n                        \"IGSTAmount\": 0,\n                        \"IGSTRate\": 18,\n                        \"SGSTAmount\": 0,\n                        \"SGSTRate\": 0,\n                        \"TaxableAmount\": 0\n                    }\n                },\n                \"HotelPicture\": \"https://images.oyoroomscdn.com/uploads/hotel_image/106191/b2a3970f5f6bfa67.jpg\",\n                \"HotelAddress\": \"Gangaram Vatika, Tilak Nagar, 110018\",\n                \"HotelContactNo\": \"\",\n                \"HotelMap\": null,\n                \"Latitude\": \"28.64245\",\n                \"Longitude\": \"77.09876\",\n                \"HotelLocation\": null,\n                \"SupplierPrice\": null,\n                \"RoomDetails\": []\n            },\n            {\n                \"IsHotDeal\": false,\n                \"ResultIndex\": 2,\n                \"HotelCode\": \"106159\",\n                \"HotelName\": \"OYO Townhouse 278 Rohini Near Rithala Metro Station\",\n                \"HotelCategory\": \"\",\n                \"StarRating\": 3,\n                \"HotelDescription\": \"Near Near Dominos Sector 24, Rohini, Dasghara, DelhiDid you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation &amp; safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.LocationLocated in Sector 24 Rohini, Flagship is located very close to popular malls and shopping complexes. Special FeaturesThe property has a modern look to its overall decor with extensive and beautiful marble work done in the lobby. A kitchen is provided for guests who want to prepare quick meals.AmenitiesThe hotel has roundtheclock power backup , CCTV Camera, AC, king size beds, free WiFi and television.Whats NearbyFor great street food, head to Wah Ji Wah and Lalaji. Chinese Hut and The Big Bun offer good fast food options. \",\n                \"HotelPromotion\": \"\",\n                \"HotelPolicy\": \"Check in After 12:00 PM|Check out Before 11:00 AM|specific_restrictions |\",\n                \"Price\": {\n                    \"CurrencyCode\": \"INR\",\n                    \"RoomPrice\": 1857.48,\n                    \"Tax\": 0,\n                    \"ExtraGuestCharge\": 0,\n                    \"ChildCharge\": 0,\n                    \"OtherCharges\": 0,\n                    \"Discount\": 0,\n                    \"PublishedPrice\": 2019,\n                    \"PublishedPriceRoundedOff\": 2019,\n                    \"OfferedPrice\": 1857.48,\n                    \"OfferedPriceRoundedOff\": 1857,\n                    \"AgentCommission\": 161.52,\n                    \"AgentMarkUp\": 0,\n                    \"ServiceTax\": 0,\n                    \"TCS\": 0,\n                    \"TDS\": 0,\n                    \"ServiceCharge\": 0,\n                    \"TotalGSTAmount\": 0,\n                    \"GST\": {\n                        \"CGSTAmount\": 0,\n                        \"CGSTRate\": 0,\n                        \"CessAmount\": 0,\n                        \"CessRate\": 0,\n                        \"IGSTAmount\": 0,\n                        \"IGSTRate\": 18,\n                        \"SGSTAmount\": 0,\n                        \"SGSTRate\": 0,\n                        \"TaxableAmount\": 0\n                    }\n                },\n                \"HotelPicture\": \"https://images.oyoroomscdn.com/uploads/hotel_image/106159/f642e25e448493d9.jpg\",\n                \"HotelAddress\": \"Pocket 27, Sector-24, Rohini, 110085\",\n                \"HotelContactNo\": \"\",\n                \"HotelMap\": null,\n                \"Latitude\": \"28.73288\",\n                \"Longitude\": \"77.08628\",\n                \"HotelLocation\": null,\n                \"SupplierPrice\": null,\n                \"RoomDetails\": []\n            },\n            {\n                \"IsHotDeal\": false,\n                \"ResultIndex\": 3,\n                \"HotelCode\": \"106185\",\n                \"HotelName\": \"OYO Townhouse 610 Derawal Nagar\",\n                \"HotelCategory\": \"\",\n                \"StarRating\": 3,\n                \"HotelDescription\": \"Near Vinayak Hoptiat, Gujranwala Town, DelhiDid you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation &amp; safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.The rooms are spacious and elegant as well as well-organised. Even the bathrooms are clean and hygienic and well-designed at this place. Location The place is located near Vinayak Hospital, Delhi.  Amenities  The rooms have beds with various options such as single beds, twin-single beds, queen-size beds and king-size beds along with bathrooms, TV, fan, a centre table and AC. Some additional facilities provided by this place are a seating area, coffee/tea maker, coffee/tea maker and mini-fridge. Whats Nearby  There are some food joints near to this place where one can enjoy food which is delicious and sumptuous. One should try these food joints for a variety of food dishes that are available over here. Expand your taste buds by trying out new flavours. \",\n                \"HotelPromotion\": \"\",\n                \"HotelPolicy\": \"Check in After 12:00 PM|Check out Before 11:00 AM|No Triple Occupancy|International Guests are Not Allowed|No Triple Occupancy | No Pak/ Afghan/ Bang | specific_restrictions | One Liner | Sold Out | No Smoking | No Foreign Guests |\",\n                \"Price\": {\n                    \"CurrencyCode\": \"INR\",\n                    \"RoomPrice\": 2722.28,\n                    \"Tax\": 0,\n                    \"ExtraGuestCharge\": 0,\n                    \"ChildCharge\": 0,\n                    \"OtherCharges\": 0,\n                    \"Discount\": 0,\n                    \"PublishedPrice\": 2959,\n                    \"PublishedPriceRoundedOff\": 2959,\n                    \"OfferedPrice\": 2722.28,\n                    \"OfferedPriceRoundedOff\": 2722,\n                    \"AgentCommission\": 236.72,\n                    \"AgentMarkUp\": 0,\n                    \"ServiceTax\": 0,\n                    \"TCS\": 0,\n                    \"TDS\": 0,\n                    \"ServiceCharge\": 0,\n                    \"TotalGSTAmount\": 0,\n                    \"GST\": {\n                        \"CGSTAmount\": 0,\n                        \"CGSTRate\": 0,\n                        \"CessAmount\": 0,\n                        \"CessRate\": 0,\n                        \"IGSTAmount\": 0,\n                        \"IGSTRate\": 18,\n                        \"SGSTAmount\": 0,\n                        \"SGSTRate\": 0,\n                        \"TaxableAmount\": 0\n                    }\n                },\n                \"HotelPicture\": \"https://images.oyoroomscdn.com/uploads/hotel_image/106185/7fbeef5b113b2e24.jpg\",\n                \"HotelAddress\": \"Lala Achintaram Marg, Derawal Nagar, 110009\",\n                \"HotelContactNo\": \"\",\n                \"HotelMap\": null,\n                \"Latitude\": \"28.69968\",\n                \"Longitude\": \"77.19017693772912\",\n                \"HotelLocation\": null,\n                \"SupplierPrice\": null,\n                \"RoomDetails\": []\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "GetHotel_Info",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"7ebd2785-9bb1-4a4e-9944-802008a091c4\",\"TraceId\":\"80ea06bc-dd0e-4ce4-825a-816888390ca6\",\"ResultIndex\":\"1\",\"HotelCode\":\"75019\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/GetHotelInfo/",
+          "protocol": "https",
+          "host": [
+            "HotelBE",
+            "tektravels",
+            "com"
+          ],
+          "path": [
+            "hotelservice.svc",
+            "rest",
+            "GetHotelInfo",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GetHotel_Info",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"1d7a06dd-d311-4938-85fc-baa22e160568\",\"TraceId\":\"8bd23232-ecdd-4db5-a027-c6f6d3d80003\",\"ResultIndex\":\"1\",\"HotelCode\":\"106109\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/GetHotelInfo/",
+              "protocol": "https",
+              "host": [
+                "HotelBE",
+                "tektravels",
+                "com"
+              ],
+              "path": [
+                "hotelservice.svc",
+                "rest",
+                "GetHotelInfo",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "date",
+              "value": "Mon, 02 Feb 2026 13:56:21 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "4993"
+            },
+            {
+              "key": "cache-control",
+              "value": "private"
+            },
+            {
+              "key": "server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "x-aspnet-version",
+              "value": "4.0.30319"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"HotelInfoResult\": {\n        \"ResponseStatus\": 1,\n        \"Error\": {\n            \"ErrorCode\": 0,\n            \"ErrorMessage\": \"\"\n        },\n        \"TraceId\": \"8bd23232-ecdd-4db5-a027-c6f6d3d80003\",\n        \"HotelDetails\": {\n            \"HotelCode\": \"106109\",\n            \"HotelName\": \"Capital O The Lazeez Hotel Near Lajpat Nagar Metro Station\",\n            \"StarRating\": 3,\n            \"HotelURL\": null,\n            \"Description\": \"Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation &amp; safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.Planning a trip to the lively city of Delhi? You might just love this stay option Lajpat Nagar. This location is the perfect mix of city life and greenery, and the stay itself well-designed, has lots of bright light, and the furniture is contemporary and comfortable. Do check out the view from here, which is quite spectacular.Getting there: The Lajpat Nagar Bus Stop and the Vinobapuri Metro Station, and also the Laj[at Nagar Railway Station are just 5 minutes away from the property.Whats nearby: Delhi is known for itâ€™s hearty and delicious food, which you can enjoy at places like Bikanervala Family Restaurant, Mazaar, and Kabul Delhi, which are 5-10 minutes away. You can also enjoy a movie at the nearby PVR 3Câ€™s Cinema, and then indulge in a relaxing evening at the Lala Lajpat Rai Memorial Park.&nbsp; <br />\",\n            \"Attractions\": null,\n            \"HotelFacilities\": [\n                \"AC\",\n                \"TV\"\n            ],\n            \"HotelPolicy\": \"Check in After 12:00 PM|Check out Before 11:00 AM|International Guests are Not Allowed|specific_restrictions | One Liner | Sold Out | No Foreign Guests ||\",\n            \"SpecialInstructions\": null,\n            \"HotelPicture\": null,\n            \"Images\": [\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/1144cf68b16f889b.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/50ccd3e0b8389db5.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/4aeb2d8e1f251419.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/ef2e8653a4a71a3b.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/b8ec361fd9267d0c.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/9c153c32b54f566c.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/f6f3763c7bfcf1c9.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/dfa7848bcc099e49.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/2956b12ad4db2a1f.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/bf9d548860b292d9.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/2a99e001e1464789.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/963755a17a82734f.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/f5e1fd0afb9a2d49.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/41b9be91265685c9.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/94b0afa185d9f859.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/c73312b6dff73dd8.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/5b0893d1e1b81190.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/89ab10abfc14263e.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/cdfef8344855a0b8.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/39ed243c805c159d.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/7943dc5798ff6e56.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/792603eebd4552f1.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/b77ad6643e26d9f3.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/c80a52353afa294f.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/546fa7bed414de93.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/a5d70135f981bd67.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/b2cdb8a84482613b.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/8e9bb0d547bd68ff.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/d2cda654ec9f8a38.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/d6bb9bb93cfd1f86.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/bb8580fd3c371e3f.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/ef27a1ca1e350af6.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/3e7ee708bbb73b93.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/df47caf655e9d6bb.jpg\",\n                \"https://images.oyoroomscdn.com/uploads/hotel_image/106109/814d890ff433c8f9.jpg\"\n            ],\n            \"Address\": \"Block I, Lajpat Nagar Ii, Lajpat Nagar, \",\n            \"CountryName\": \"\",\n            \"PinCode\": \"110024\",\n            \"HotelContactNo\": null,\n            \"FaxNumber\": null,\n            \"Email\": null,\n            \"Latitude\": \"28.5698651092765\",\n            \"Longitude\": \"77.24419394508004\",\n            \"RoomData\": null,\n            \"RoomFacilities\": null,\n            \"Services\": null\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "GetHotelRoom",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"7ebd2785-9bb1-4a4e-9944-802008a091c4\",\"ResultIndex\":\"1\",\"HotelCode\":\"75019\",\"TraceId\":\"80ea06bc-dd0e-4ce4-825a-816888390ca6\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/GetHotelRoom/",
+          "protocol": "https",
+          "host": [
+            "HotelBE",
+            "tektravels",
+            "com"
+          ],
+          "path": [
+            "hotelservice.svc",
+            "rest",
+            "GetHotelRoom",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GetHotelRoom",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"1d7a06dd-d311-4938-85fc-baa22e160568\",\"ResultIndex\":\"1\",\"HotelCode\":\"106109\",\"TraceId\":\"8bd23232-ecdd-4db5-a027-c6f6d3d80003\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/GetHotelRoom/",
+              "protocol": "https",
+              "host": [
+                "HotelBE",
+                "tektravels",
+                "com"
+              ],
+              "path": [
+                "hotelservice.svc",
+                "rest",
+                "GetHotelRoom",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "date",
+              "value": "Mon, 02 Feb 2026 13:58:55 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "2083"
+            },
+            {
+              "key": "cache-control",
+              "value": "private"
+            },
+            {
+              "key": "server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "x-aspnet-version",
+              "value": "4.0.30319"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"GetHotelRoomResult\": {\n        \"ResponseStatus\": 1,\n        \"Error\": {\n            \"ErrorCode\": 0,\n            \"ErrorMessage\": \"\"\n        },\n        \"TraceId\": \"8bd23232-ecdd-4db5-a027-c6f6d3d80003\",\n        \"IsUnderCancellationAllowed\": true,\n        \"IsPolicyPerStay\": true,\n        \"HotelRoomsDetails\": [\n            {\n                \"AvailabilityType\": \"Confirm\",\n                \"ChildCount\": 0,\n                \"IsTransferIncluded\": false,\n                \"RequireAllPaxDetails\": false,\n                \"RoomId\": 0,\n                \"RoomStatus\": 0,\n                \"RoomIndex\": 1,\n                \"RoomTypeCode\": \"106109|1|0\",\n                \"RoomDescription\": \"Classic\",\n                \"RoomTypeName\": \"OYO - Classic\",\n                \"RatePlanCode\": \"106109|1|0_1|0|0\",\n                \"RatePlan\": 13,\n                \"InfoSource\": \"FixedCombination\",\n                \"SequenceNo\": \"OYO~106109~0\",\n                \"DayRates\": [\n                    {\n                        \"Amount\": 1277.88,\n                        \"Date\": \"2026-03-20T00:00:00\"\n                    }\n                ],\n                \"IsPerStay\": false,\n                \"SupplierPrice\": null,\n                \"Price\": {\n                    \"CurrencyCode\": \"INR\",\n                    \"RoomPrice\": 1277.88,\n                    \"Tax\": 0,\n                    \"ExtraGuestCharge\": 0,\n                    \"ChildCharge\": 0,\n                    \"OtherCharges\": 0,\n                    \"Discount\": 0,\n                    \"PublishedPrice\": 1389,\n                    \"PublishedPriceRoundedOff\": 1389,\n                    \"OfferedPrice\": 1277.88,\n                    \"OfferedPriceRoundedOff\": 1278,\n                    \"AgentCommission\": 111.12,\n                    \"AgentMarkUp\": 0,\n                    \"ServiceTax\": 0,\n                    \"TCS\": 0,\n                    \"TDS\": 44.45,\n                    \"ServiceCharge\": 0,\n                    \"TotalGSTAmount\": 0,\n                    \"GST\": {\n                        \"CGSTAmount\": 0,\n                        \"CGSTRate\": 0,\n                        \"CessAmount\": 0,\n                        \"CessRate\": 0,\n                        \"IGSTAmount\": 0,\n                        \"IGSTRate\": 18,\n                        \"SGSTAmount\": 0,\n                        \"SGSTRate\": 0,\n                        \"TaxableAmount\": 0\n                    }\n                },\n                \"RoomPromotion\": \"\",\n                \"Amenities\": [\n                    \"Free Breakfast\"\n                ],\n                \"Amenity\": [],\n                \"SmokingPreference\": \"NoPreference\",\n                \"BedTypes\": [],\n                \"HotelSupplements\": [],\n                \"LastCancellationDate\": \"2026-02-01T23:59:59\",\n                \"CancellationPolicies\": [\n                    {\n                        \"Charge\": 100,\n                        \"ChargeType\": 2,\n                        \"Currency\": \"INR\",\n                        \"FromDate\": \"2026-02-02T00:00:00\",\n                        \"ToDate\": \"2026-03-09T23:59:59\"\n                    },\n                    {\n                        \"Charge\": 100,\n                        \"ChargeType\": 2,\n                        \"Currency\": \"INR\",\n                        \"FromDate\": \"2026-03-10T00:00:00\",\n                        \"ToDate\": \"2026-03-21T23:59:59\"\n                    }\n                ],\n                \"LastVoucherDate\": \"2026-02-02T00:00:00\",\n                \"CancellationPolicy\": \"100.00% of total amount will be charged, If cancelled between 02-Feb-2026 00:00:00 and 09-Mar-2026 23:59:59.|100.00% of total amount will be charged, If cancelled between 10-Mar-2026 00:00:00 and 21-Mar-2026 23:59:59.|#!#\",\n                \"Inclusion\": [\n                    \"Free Breakfast\"\n                ],\n                \"IsPassportMandatory\": false,\n                \"IsPANMandatory\": false,\n                \"BeddingGroup\": null\n            }\n        ],\n        \"RoomCombinations\": {\n            \"InfoSource\": \"FixedCombination\",\n            \"IsPolicyPerStay\": true,\n            \"RoomCombination\": [\n                {\n                    \"RoomIndex\": [\n                        1\n                    ]\n                }\n            ]\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "BlockRoom",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"7ebd2785-9bb1-4a4e-9944-802008a091c4\",\"TraceId\":\"80ea06bc-dd0e-4ce4-825a-816888390ca6\",\"ResultIndex\":\"1\",\"HotelCode\":\"75019\",\"HotelName\":\"OYO 1 Plus One Hotel Residency Near Nawada Metro Station\",\"GuestNationality\":\"IN\",\"IsVoucherBooking\":\"true\",\"NoOfRooms\":\"1\", \"HotelRoomsDetails\": [\r\n            {\r\n                \"AvailabilityType\": \"Confirm\",\r\n                \"ChildCount\": 0,\r\n                \"IsTransferIncluded\": false,\r\n                \"RequireAllPaxDetails\": false,\r\n                \"RoomId\": 0,\r\n                \"RoomStatus\": 0,\r\n                \"RoomIndex\": 1,\r\n                \"RoomTypeCode\": \"75019|1|0\",\r\n                \"RoomDescription\": \"Classic\",\r\n                \"RoomTypeName\": \"OYO - Classic\",\r\n                \"RatePlanCode\": \"75019|1|0_1|0|0\",\r\n                \"RatePlan\": 13,\r\n                \"InfoSource\": \"FixedCombination\",\r\n                \"SequenceNo\": \"OYO~75019~0\",\r\n                \"DayRates\": [\r\n                    {\r\n                        \"Amount\": 803.16,\r\n                        \"Date\": \"2026-03-25T00:00:00\"\r\n                    }\r\n                ],\r\n                \"IsPerStay\": false,\r\n                \"SupplierPrice\": null,\r\n                \"Price\": {\r\n                    \"CurrencyCode\": \"INR\",\r\n                    \"RoomPrice\": 803.16,\r\n                    \"Tax\": 0,\r\n                    \"ExtraGuestCharge\": 0,\r\n                    \"ChildCharge\": 0,\r\n                    \"OtherCharges\": 0.00,\r\n                    \"Discount\": 0,\r\n                    \"PublishedPrice\": 873.00,\r\n                    \"PublishedPriceRoundedOff\": 873,\r\n                    \"OfferedPrice\": 803.16,\r\n                    \"OfferedPriceRoundedOff\": 803,\r\n                    \"AgentCommission\": 69.84,\r\n                    \"AgentMarkUp\": 0,\r\n                    \"ServiceTax\": 0.00,\r\n                    \"TCS\": 0,\r\n                    \"TDS\": 27.94,\r\n                    \"ServiceCharge\": 0,\r\n                    \"TotalGSTAmount\": 0.00,\r\n                    \"GST\": {\r\n                        \"CGSTAmount\": 0,\r\n                        \"CGSTRate\": 0,\r\n                        \"CessAmount\": 0.00,\r\n                        \"CessRate\": 0,\r\n                        \"IGSTAmount\": 0.00,\r\n                        \"IGSTRate\": 18,\r\n                        \"SGSTAmount\": 0,\r\n                        \"SGSTRate\": 0,\r\n                        \"TaxableAmount\": 0.00\r\n                    }\r\n                },\"SmokingPreference\":\"0\",\"BedTypes\":[],\"Supplements\":[],\"BedTypeCode\":\"\",\"IsPANMandatory\":false,\"IsPassportMandatory\":false}]}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/BlockRoom",
+          "protocol": "https",
+          "host": [
+            "HotelBE",
+            "tektravels",
+            "com"
+          ],
+          "path": [
+            "hotelservice.svc",
+            "rest",
+            "BlockRoom"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "BlockRoom",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"1062ef7b-5407-4364-89d6-0cdf1fdc6830\",\"TraceId\":\"575398b4-f65e-47d5-b081-7c4c79573260\",\"ResultIndex\":\"1\",\"HotelCode\":\"75019\",\"HotelName\":\"OYO 1 PLUS ONE HOTEL RESIDENCY NEAR NAWADA METRO STATION\",\"GuestNationality\":\"IN\",\"IsVoucherBooking\":\"true\",\"NoOfRooms\":\"1\",\"HotelRoomsDetails\":[{\"RoomIndex\":1,\"RoomTypeCode\":\"75019|1|0\",\"RoomTypeName\":\"OYO - Classic\",\"RatePlanCode\":\"75019|1|0_1|0|0\",\"Price\":{\"CurrencyCode\":\"INR\",\"RoomPrice\":857.44,\"Tax\":0.0,\"ExtraGuestCharge\":0.0,\"ChildCharge\":0.0,\"OtherCharges\":0.0,\"Discount\":0.0,\"PublishedPrice\":932.0,\"PublishedPriceRoundedOff\":932.0,\"OfferedPrice\":857.44,\"OfferedPriceRoundedOff\":857.0,\"AgentCommission\":74.56,\"AgentMarkUp\":0.0,\"ServiceTax\":0.0,\"TDS\":29.82,\"TotalGSTAmount\":0.0,\"GST\":{\"CGSTAmount\":0,\"CGSTRate\":0,\"CessAmount\":0,\"CessRate\":0,\"IGSTAmount\":0.0,\"IGSTRate\":18,\"SGSTAmount\":0,\"SGSTRate\":0,\"TaxableAmount\":0.0}},\"SmokingPreference\":\"0\",\"BedTypes\":[],\"Supplements\":[],\"BedTypeCode\":\"\",\"IsPANMandatory\":false,\"IsPassportMandatory\":false}]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/BlockRoom/",
+              "protocol": "https",
+              "host": [
+                "HotelBE",
+                "tektravels",
+                "com"
+              ],
+              "path": [
+                "hotelservice.svc",
+                "rest",
+                "BlockRoom",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "date",
+              "value": "Mon, 02 Feb 2026 14:11:12 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "6433"
+            },
+            {
+              "key": "cache-control",
+              "value": "private"
+            },
+            {
+              "key": "server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "x-aspnet-version",
+              "value": "4.0.30319"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"BlockRoomResult\": {\n        \"TraceId\": \"575398b4-f65e-47d5-b081-7c4c79573260\",\n        \"ResponseStatus\": 1,\n        \"Error\": {\n            \"ErrorCode\": 0,\n            \"ErrorMessage\": \"\"\n        },\n        \"IsCancellationPolicyChanged\": false,\n        \"IsHotelPolicyChanged\": true,\n        \"IsPriceChanged\": false,\n        \"IsPackageFare\": false,\n        \"IsDepartureDetailsMandatory\": false,\n        \"IsPackageDetailsMandatory\": false,\n        \"AvailabilityType\": \"Confirm\",\n        \"GSTAllowed\": false,\n        \"HotelNorms\": \"india - land of mystries \\\"//\\\" \\\"  /// \\\"  |india - land of mystries \\\"//\\\" \\\"  /// \\\"  |Check in After 12:00 PM|Check out Before 11:00 AM|No Triple Occupancy|Pure Vegetarian Kitchen|International Guests are Not Allowed|No Triple Occupancy | No Non Veg | No Pak/ Afghan/ Bang | specific_restrictions | One Liner | no_packages | No Foreign Guests ||<strong>City tax and Resort fee are to be paid directly at hotel if applicable. Most hotels do not allow unmarried / unrelated couples to check-in. This is at full discretion of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.</strong><strong>City tax and Resort fee are to be paid directly at hotel if applicable. Most hotels do not allow unmarried / unrelated couples to check-in. This is at full discretion of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.</strong>\",\n        \"HotelName\": \"OYO 1 Plus One Hotel Residency Near Nawada Metro Station\",\n        \"AddressLine1\": \"Matiala Extension, Sukh Ram Park, Matiala,  ZipCode: 110059\",\n        \"AddressLine2\": null,\n        \"StarRating\": 3,\n        \"HotelPolicyDetail\": \"india - land of mystries \\\"//\\\" \\\"  /// \\\"  |india - land of mystries \\\"//\\\" \\\"  /// \\\"  |Check in After 12:00 PM|Check out Before 11:00 AM|No Triple Occupancy|Pure Vegetarian Kitchen|International Guests are Not Allowed|No Triple Occupancy | No Non Veg | No Pak/ Afghan/ Bang | specific_restrictions | One Liner | no_packages | No Foreign Guests ||<strong>City tax and Resort fee are to be paid directly at hotel if applicable. Most hotels do not allow unmarried / unrelated couples to check-in. This is at full discretion of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.</strong><strong>City tax and Resort fee are to be paid directly at hotel if applicable. Most hotels do not allow unmarried / unrelated couples to check-in. This is at full discretion of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.</strong>\",\n        \"Latitude\": \"28.6147\",\n        \"Longitude\": \"77.04683\",\n        \"BookingAllowedForRoamer\": false,\n        \"AncillaryServices\": [],\n        \"HotelRoomsDetails\": [\n            {\n                \"AvailabilityType\": \"Confirm\",\n                \"ChildCount\": 0,\n                \"IsTransferIncluded\": false,\n                \"RequireAllPaxDetails\": false,\n                \"RoomId\": 0,\n                \"RoomStatus\": 0,\n                \"RoomIndex\": 1,\n                \"RoomTypeCode\": \"75019|1|0\",\n                \"RoomDescription\": \"Classic\",\n                \"RoomTypeName\": \"OYO - Classic\",\n                \"RatePlanCode\": \"75019|1|0_1|0|0\",\n                \"RatePlan\": 13,\n                \"InfoSource\": \"FixedCombination\",\n                \"SequenceNo\": \"OYO~75019~0\",\n                \"DayRates\": [\n                    {\n                        \"Amount\": 857.44,\n                        \"Date\": \"2026-03-20T00:00:00\"\n                    }\n                ],\n                \"IsPerStay\": false,\n                \"SupplierPrice\": null,\n                \"Price\": {\n                    \"CurrencyCode\": \"INR\",\n                    \"RoomPrice\": 857.44,\n                    \"Tax\": 0,\n                    \"ExtraGuestCharge\": 0,\n                    \"ChildCharge\": 0,\n                    \"OtherCharges\": 0,\n                    \"Discount\": 0,\n                    \"PublishedPrice\": 932,\n                    \"PublishedPriceRoundedOff\": 932,\n                    \"OfferedPrice\": 857.44,\n                    \"OfferedPriceRoundedOff\": 857,\n                    \"AgentCommission\": 74.56,\n                    \"AgentMarkUp\": 0,\n                    \"ServiceTax\": 0,\n                    \"TCS\": 0,\n                    \"TDS\": 29.82,\n                    \"ServiceCharge\": 0,\n                    \"TotalGSTAmount\": 0,\n                    \"GST\": {\n                        \"CGSTAmount\": 0,\n                        \"CGSTRate\": 0,\n                        \"CessAmount\": 0,\n                        \"CessRate\": 0,\n                        \"IGSTAmount\": 0,\n                        \"IGSTRate\": 18,\n                        \"SGSTAmount\": 0,\n                        \"SGSTRate\": 0,\n                        \"TaxableAmount\": 0\n                    }\n                },\n                \"RoomPromotion\": \"\",\n                \"Amenities\": [\n                    \"Free Breakfast\"\n                ],\n                \"Amenity\": [],\n                \"SmokingPreference\": \"NoPreference\",\n                \"BedTypes\": [],\n                \"HotelSupplements\": [],\n                \"LastCancellationDate\": \"2026-02-01T23:59:59\",\n                \"SupplierSpecificData\": \"india - land of mystries \\\"//\\\" \\\"  /// \\\"  |india - land of mystries \\\"//\\\" \\\"  /// \\\"  |Check in After 12:00 PM|Check out Before 11:00 AM|No Triple Occupancy|Pure Vegetarian Kitchen|International Guests are Not Allowed|No Triple Occupancy | No Non Veg | No Pak/ Afghan/ Bang | specific_restrictions | One Liner | no_packages | No Foreign Guests ||<strong>City tax and Resort fee are to be paid directly at hotel if applicable. Most hotels do not allow unmarried / unrelated couples to check-in. This is at full discretion of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.</strong><strong>City tax and Resort fee are to be paid directly at hotel if applicable. Most hotels do not allow unmarried / unrelated couples to check-in. This is at full discretion of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.</strong>\",\n                \"CancellationPolicies\": [\n                    {\n                        \"Charge\": 100,\n                        \"ChargeType\": 2,\n                        \"Currency\": \"INR\",\n                        \"FromDate\": \"2026-02-02T00:00:00\",\n                        \"ToDate\": \"2026-03-09T23:59:59\"\n                    },\n                    {\n                        \"Charge\": 100,\n                        \"ChargeType\": 2,\n                        \"Currency\": \"INR\",\n                        \"FromDate\": \"2026-03-10T00:00:00\",\n                        \"ToDate\": \"2026-03-21T23:59:59\"\n                    }\n                ],\n                \"LastVoucherDate\": \"2026-02-02T00:00:00\",\n                \"CancellationPolicy\": \"100.00% of total amount will be charged, If cancelled between 02-Feb-2026 00:00:00 and 09-Mar-2026 23:59:59.|100.00% of total amount will be charged, If cancelled between 10-Mar-2026 00:00:00 and 21-Mar-2026 23:59:59.|#!#\",\n                \"Inclusion\": [\n                    \"Free Breakfast\"\n                ],\n                \"IsPassportMandatory\": false,\n                \"IsPANMandatory\": false,\n                \"BeddingGroup\": null\n            }\n        ],\n        \"ValidationInfo\": {\n            \"ValidationAtConfirm\": {\n                \"IsAgencyOwnPANAllowed\": false,\n                \"IsCorporateBookingAllowed\": true,\n                \"IsCrpPANMandatory\": false,\n                \"IsCrpPassportCopyMandatory\": false,\n                \"IsCrpPassportMandatory\": false,\n                \"IsCrpSamePANForAllAllowed\": true,\n                \"IsEmailMandatory\": false,\n                \"IsPANCopyPANMandatory\": false,\n                \"IsPANMandatory\": false,\n                \"IsPassportCopyMandatory\": false,\n                \"IsPassportMandatory\": false,\n                \"IsSamePANForAllAllowed\": true,\n                \"IsTCSApplicableOnCrp\": false,\n                \"NoOfPANRequired\": 0,\n                \"PassengerValidation\": null\n            },\n            \"ValidationAtVoucher\": {\n                \"IsAgencyOwnPANAllowed\": false,\n                \"IsCorporateBookingAllowed\": true,\n                \"IsCrpPANMandatory\": false,\n                \"IsCrpPassportCopyMandatory\": false,\n                \"IsCrpPassportMandatory\": false,\n                \"IsCrpSamePANForAllAllowed\": true,\n                \"IsEmailMandatory\": false,\n                \"IsPANCopyPANMandatory\": false,\n                \"IsPANMandatory\": false,\n                \"IsPassportCopyMandatory\": false,\n                \"IsPassportMandatory\": false,\n                \"IsSamePANForAllAllowed\": true,\n                \"IsTCSApplicableOnCrp\": false,\n                \"NoOfPANRequired\": 0,\n                \"PassengerValidation\": {\n                    \"IsCharLimit\": true,\n                    \"IsSamePaxNameNotAllowed\": false,\n                    \"IsSpaceNotAllowed\": false,\n                    \"IsSpecialCharAllowed\": false,\n                    \"PaxNameMaxLength\": 50,\n                    \"PaxNameMinLength\": 1\n                }\n            }\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"7ebd2785-9bb1-4a4e-9944-802008a091c4\",\"TraceId\":\"80ea06bc-dd0e-4ce4-825a-816888390ca6\",\"ResultIndex\":\"1\",\"HotelCode\":\"75019\",\"HotelName\":\"OYO 1 Plus One Hotel Residency Near Nawada Metro Station\",\"GuestNationality\":\"IN\",\"IsVoucherBooking\":\"false\",\"NoOfRooms\":\"1\",\"HotelRoomsDetails\": [\r\n            {\r\n                \"AvailabilityType\": \"Confirm\",\r\n                \"ChildCount\": 0,\r\n                \"IsTransferIncluded\": false,\r\n                \"RequireAllPaxDetails\": false,\r\n                \"RoomId\": 0,\r\n                \"RoomStatus\": 0,\r\n                \"RoomIndex\": 1,\r\n                \"RoomTypeCode\": \"75019|1|0\",\r\n                \"RoomDescription\": \"Classic\",\r\n                \"RoomTypeName\": \"OYO - Classic\",\r\n                \"RatePlanCode\": \"75019|1|0_1|0|0\",\r\n                \"RatePlan\": 13,\r\n                \"InfoSource\": \"FixedCombination\",\r\n                \"SequenceNo\": \"OYO~75019~0\",\r\n                \"DayRates\": [\r\n                    {\r\n                        \"Amount\": 803.16,\r\n                        \"Date\": \"2026-03-25T00:00:00\"\r\n                    }\r\n                ],\r\n                \"IsPerStay\": false,\r\n                \"SupplierPrice\": null,\r\n                \"Price\": {\r\n                    \"CurrencyCode\": \"INR\",\r\n                    \"RoomPrice\": 803.16,\r\n                    \"Tax\": 0,\r\n                    \"ExtraGuestCharge\": 0,\r\n                    \"ChildCharge\": 0,\r\n                    \"OtherCharges\": 0.00,\r\n                    \"Discount\": 0,\r\n                    \"PublishedPrice\": 873.00,\r\n                    \"PublishedPriceRoundedOff\": 873,\r\n                    \"OfferedPrice\": 803.16,\r\n                    \"OfferedPriceRoundedOff\": 803,\r\n                    \"AgentCommission\": 69.84,\r\n                    \"AgentMarkUp\": 0,\r\n                    \"ServiceTax\": 0.00,\r\n                    \"TCS\": 0,\r\n                    \"TDS\": 27.94,\r\n                    \"ServiceCharge\": 0,\r\n                    \"TotalGSTAmount\": 0.00,\r\n                    \"GST\": {\r\n                        \"CGSTAmount\": 0,\r\n                        \"CGSTRate\": 0,\r\n                        \"CessAmount\": 0.00,\r\n                        \"CessRate\": 0,\r\n                        \"IGSTAmount\": 0.00,\r\n                        \"IGSTRate\": 18,\r\n                        \"SGSTAmount\": 0,\r\n                        \"SGSTRate\": 0,\r\n                        \"TaxableAmount\": 0.00\r\n                    }\r\n                },\"SmokingPreference\":\"0\",\"BedTypes\":[],\"Supplements\":[],\"BedTypeCode\":\"\",\"IsPANMandatory\":false,\"HotelPassenger\":[{\"FirstName\":\"Venkatesh\",\"LastName\":\"Venki\",\"LeadPassenger\":\"true\",\"PaxType\":\"1\",\"Title\":\"Mr\",\"Age\":\"30\",\"PAN\":\"AFZPK7190K\"}\r\n                ],\"IsPassportMandatory\":false}],\"IsPackageFare\":false,\"IsPackageDetailsMandatory\":false}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/Book/",
+          "protocol": "https",
+          "host": [
+            "HotelBE",
+            "tektravels",
+            "com"
+          ],
+          "path": [
+            "hotelservice.svc",
+            "rest",
+            "Book",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Book",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"EndUserIp\":\"192.168.0.170\",\"TokenId\":\"7ebd2785-9bb1-4a4e-9944-802008a091c4\",\"TraceId\":\"80ea06bc-dd0e-4ce4-825a-816888390ca6\",\"ResultIndex\":\"1\",\"HotelCode\":\"75019\",\"HotelName\":\"OYO 1 Plus One Hotel Residency Near Nawada Metro Station\",\"GuestNationality\":\"IN\",\"IsVoucherBooking\":\"false\",\"NoOfRooms\":\"1\",\"HotelRoomsDetails\": [\r\n            {\r\n                \"AvailabilityType\": \"Confirm\",\r\n                \"ChildCount\": 0,\r\n                \"IsTransferIncluded\": false,\r\n                \"RequireAllPaxDetails\": false,\r\n                \"RoomId\": 0,\r\n                \"RoomStatus\": 0,\r\n                \"RoomIndex\": 1,\r\n                \"RoomTypeCode\": \"75019|1|0\",\r\n                \"RoomDescription\": \"Classic\",\r\n                \"RoomTypeName\": \"OYO - Classic\",\r\n                \"RatePlanCode\": \"75019|1|0_1|0|0\",\r\n                \"RatePlan\": 13,\r\n                \"InfoSource\": \"FixedCombination\",\r\n                \"SequenceNo\": \"OYO~75019~0\",\r\n                \"DayRates\": [\r\n                    {\r\n                        \"Amount\": 803.16,\r\n                        \"Date\": \"2026-03-25T00:00:00\"\r\n                    }\r\n                ],\r\n                \"IsPerStay\": false,\r\n                \"SupplierPrice\": null,\r\n                \"Price\": {\r\n                    \"CurrencyCode\": \"INR\",\r\n                    \"RoomPrice\": 803.16,\r\n                    \"Tax\": 0,\r\n                    \"ExtraGuestCharge\": 0,\r\n                    \"ChildCharge\": 0,\r\n                    \"OtherCharges\": 0.00,\r\n                    \"Discount\": 0,\r\n                    \"PublishedPrice\": 873.00,\r\n                    \"PublishedPriceRoundedOff\": 873,\r\n                    \"OfferedPrice\": 803.16,\r\n                    \"OfferedPriceRoundedOff\": 803,\r\n                    \"AgentCommission\": 69.84,\r\n                    \"AgentMarkUp\": 0,\r\n                    \"ServiceTax\": 0.00,\r\n                    \"TCS\": 0,\r\n                    \"TDS\": 27.94,\r\n                    \"ServiceCharge\": 0,\r\n                    \"TotalGSTAmount\": 0.00,\r\n                    \"GST\": {\r\n                        \"CGSTAmount\": 0,\r\n                        \"CGSTRate\": 0,\r\n                        \"CessAmount\": 0.00,\r\n                        \"CessRate\": 0,\r\n                        \"IGSTAmount\": 0.00,\r\n                        \"IGSTRate\": 18,\r\n                        \"SGSTAmount\": 0,\r\n                        \"SGSTRate\": 0,\r\n                        \"TaxableAmount\": 0.00\r\n                    }\r\n                },\"SmokingPreference\":\"0\",\"BedTypes\":[],\"Supplements\":[],\"BedTypeCode\":\"\",\"IsPANMandatory\":false,\"HotelPassenger\":[{\"FirstName\":\"Venkatesh\",\"LastName\":\"Venki\",\"LeadPassenger\":\"true\",\"PaxType\":\"1\",\"Title\":\"Mr\",\"Age\":\"30\",\"PAN\":\"AFZPK7190K\"}\r\n                ],\"IsPassportMandatory\":false}],\"IsPackageFare\":false,\"IsPackageDetailsMandatory\":false}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://HotelBE.tektravels.com/hotelservice.svc/rest/Book/",
+              "protocol": "https",
+              "host": [
+                "HotelBE",
+                "tektravels",
+                "com"
+              ],
+              "path": [
+                "hotelservice.svc",
+                "rest",
+                "Book",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "date",
+              "value": "Mon, 02 Feb 2026 14:43:26 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "370"
+            },
+            {
+              "key": "cache-control",
+              "value": "private"
+            },
+            {
+              "key": "server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "x-aspnet-version",
+              "value": "4.0.30319"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"BookResult\": {\n        \"TBOReferenceNo\": null,\n        \"VoucherStatus\": false,\n        \"ResponseStatus\": 3,\n        \"Error\": {\n            \"ErrorCode\": 3,\n            \"ErrorMessage\": \"Booking Under Cancellation can only be vouchered\"\n        },\n        \"TraceId\": \"80ea06bc-dd0e-4ce4-825a-816888390ca6\",\n        \"Status\": 0,\n        \"HotelBookingStatus\": null,\n        \"ConfirmationNo\": null,\n        \"BookingRefNo\": null,\n        \"BookingId\": 0,\n        \"IsPriceChanged\": false,\n        \"IsCancellationPolicyChanged\": false\n    }\n}"
+        }
+      ]
+    }
+  ]
+}
